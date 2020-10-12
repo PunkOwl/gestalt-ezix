@@ -1,0 +1,22 @@
+{
+  "name": "gestalt-ezix",
+  "version": "0.1.0",
+  "description": "User interface support of gestalt",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PunkOwl/gestalt-ezix.git"
+  },
+  "author": "vonqo",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/PunkOwl/gestalt-ezix/issues"
+  },
+  "homepage": "https://github.com/PunkOwl/gestalt-ezix#readme",
+  "devDependencies": {
+    "electron": "^10.1.3"
+  }
+}

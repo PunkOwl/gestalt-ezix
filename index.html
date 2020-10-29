@@ -2,14 +2,157 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Gestalt EZIX</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta charset="UTF-8">
+    <meta name="author" content="vonqo">
+    <link rel="stylesheet" href="assets/style.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+      <div class="header">
+        PunkOwl GESTALT
+      </div>
+      <div class="render-container">
+        <div class="render-tile" id="vanilla">
+          <div class="tile-title">VANILLA</div>
+          <div class="tile-body">4 x Linear moodbar</div>
+        </div>
+        <div class="render-tile" id="collection">
+          <div class="tile-title">COLLECTION</div>
+          <div class="tile-body">Moodbar and Spectogram comparision</div>
+        </div>
+        <div class="render-tile" id="bubble">
+          <div class="tile-title">BUBBLE</div>
+          <div class="tile-body">Flat Bubblebar</div>
+        </div>
+        <div class="render-tile" id="bubble2">
+          <div class="tile-title">BUBBLEv2</div>
+          <div class="tile-body">Raytraced Bubblebar</div>
+        </div>
+      </div>
+      <div style="margin-bottom: 1px"></div>
+      <div class="render-container">
+        <div class="render-tile" id="pulse">
+          <div class="tile-title">PULSE</div>
+          <div class="tile-body">Raytraced beating beam</div>
+        </div>
+        <div class="render-tile" id="cardiac">
+          <div class="tile-title">CARDIAC</div>
+          <div class="tile-body">Raytraced cardiac shaped beam</div>
+        </div>
+        <div class="render-tile">
+
+        </div>
+        <div class="render-tile">
+
+        </div>
+      </div>
+      <div style="margin-bottom: 1px"></div>
+      <div id="settings">
+
+        <!-- VANILLA SETTINGS -->
+        <div id="vanilla-settings">
+          <div>
+            Music #1: 
+            <input type="file" id="audio" name="audio" accept="audio/mpeg"/>
+            <input type="text"/>
+          </div>
+          <div>
+            Music #2: 
+            <input type="file" id="audio" name="audio" accept="audio/mpeg"/>
+            <input type="text"/>
+          </div>
+          <div>
+            Music #3: 
+            <input type="file" id="audio" name="audio" accept="audio/mpeg"/>
+            <input type="text"/>
+          </div>
+          <div>
+            Music #4: 
+            <input type="file" id="audio" name="audio" accept="audio/mpeg"/>
+            <input type="text"/>
+          </div>
+        </div>
+
+        <!-- OTHER SETTINGS -->
+        <div id="other-settings">
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <span class="version">Gestalt Easy Interface Version 1.0.1 /////////// </span>Made by <span class="author">vonqo</span> with <img src="assets/heart-icon.png" height="8">
+        </div>
+      </div>
+      <script>
+        let $ = require('jquery');
+        let selecedRenderId = null;
+
+        $(document).ready(function() {
+          console.log( "ready!" );
+          
+          $("#vanilla").click(function() {
+            if(selecedRenderId != null) {
+              $("#"+selecedRenderId).removeClass('render-active');
+            }
+            selecedRenderId = 'vanilla';
+            $("#vanilla").addClass('render-active');
+          });
+
+          $("#collection").click(function() {
+            if(selecedRenderId != null) {
+              $("#"+selecedRenderId).removeClass('render-active');
+            }
+            selecedRenderId = 'collection';
+            $("#collection").addClass('render-active');
+          });
+
+          $("#bubble").click(function() {
+            if(selecedRenderId != null) {
+              $("#"+selecedRenderId).removeClass('render-active');
+            }
+            selecedRenderId = 'bubble';
+            $("#bubble").addClass('render-active');
+          });
+
+          $("#bubble2").click(function() {
+            if(selecedRenderId != null) {
+              $("#"+selecedRenderId).removeClass('render-active');
+            }
+            selecedRenderId = 'bubble2';
+            $("#bubble2").addClass('render-active');
+          });
+
+          $("#pulse").click(function() {
+            if(selecedRenderId != null) {
+              $("#"+selecedRenderId).removeClass('render-active');
+            }
+            selecedRenderId = 'pulse';
+            $("#pulse").addClass('render-active');
+          });
+
+          $("#cardiac").click(function() {
+            if(selecedRenderId != null) {
+              $("#"+selecedRenderId).removeClass('render-active');
+            }
+            selecedRenderId = 'cardiac';
+            $("#cardiac").addClass('render-active');
+          });
+        });
+        
+        const { exec } = require("child_process");
+        exec("ls -la", (error, stdout, stderr) => {
+          if (error) {
+              console.log(`error: ${error.message}`);
+              return;
+          }
+          if (stderr) {
+              console.log(`stderr: ${stderr}`);
+              return;
+          }
+          console.log(`stdout: ${stdout}`);
+        });
+      </script>
   </body>
 </html>

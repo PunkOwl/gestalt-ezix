@@ -46,9 +46,33 @@ body {
 #settings {
     padding: 10px;
     color: #eee;
+    font-size: 13px;
+}
+
+.settings {
+    display: flex;
+}
+
+input {
+    border: 1px solid black;
+    width: 200px;
+}
+
+.input-section {
+    width: 600px;
+}
+.export-section {
+    width: 200px;
+}
+
+.export-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 6px;
 }
 
 .footer{
+    height: 24px;
     background-color: #161b1f;
     width: 100%;
     font-size: 11px;
@@ -69,4 +93,66 @@ body {
 .version {
     color: #ccc;
     font-family: "Times New Roman", Times, serif;
+}
+
+/* ============================================================== */
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: flex;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 10px 24px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+  .btn:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+.fifth {
+    border-color: #d13a1d;
+    border-radius: 0;
+    color: #d13a1d;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+  }
+.fifth:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: #d13a1d;
+    z-index: -1;
+    -webkit-transition: width 150ms ease-in-out;
+    transition: width 150ms ease-in-out;
+}
+.fifth:hover {
+    color: #fff;
+}
+.fifth:hover:after {
+    width: 110%;
 }

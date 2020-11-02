@@ -5,7 +5,7 @@
 
 User interface support of [Gestalt](https://github.com/punkowl/gestalt).
 
-<img src="https://github.com/gestalt-ezix/blob/master/public/ss1.png" width="80%">
+<img src="https://raw.githubusercontent.com/PunkOwl/gestalt-ezix/main/public/ss1.png" width="80%">
 
 ## Copyright & License
 Copyright (c) 2019 Enkh-Amar.G - Released under the [Mozilla Public License Version 2.0](LICENSE)

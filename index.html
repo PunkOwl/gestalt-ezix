@@ -11,7 +11,8 @@
   </head>
   <body>
       <div class="header">
-        PunkOwl GESTALT
+        <img src="assets/gestalt-logo.png" height="45">
+        <img src="assets/cnc-logo.png" height="45">
       </div>
       <div class="render-container">
         <div class="render-tile" id="vanilla">
@@ -48,11 +49,11 @@
 
         </div>
       </div>
-      <div style="margin-bottom: 1px"></div>
+      <div style="margin-bottom: 24px"></div>
       <div id="settings">
 
         <!-- VANILLA SETTINGS -->
-        <div id="vanilla-settings" class="settings">
+        <div id="vanilla-settings" class="settings non-hidden">
           <div class="input-section">
             <div>
               Audio 1: 
@@ -76,8 +77,8 @@
             </div>
           </div>
           <div class="export-section">
-            <div>
-              Is printable: <input type="checkbox" id="is_printable" name="is_printable" value="true"/>
+            <div class="printable-section">
+              Is printable: <input type="checkbox" class="printable_checkbox" id="is_printable_vanilla" name="is_printable" value="true"/>
             </div>
             <div class="export-btn">
               <button class="btn fifth">Export</button>
@@ -86,9 +87,39 @@
         </div>
 
         <!-- OTHER SETTINGS -->
-        <div id="other-settings">
-
+        <div id="other-settings" class="settings hidden">
+          <div class="input-section">
+            <div>
+              Audio 1: 
+              <input type="file" id="audio" name="audio" accept="audio/mpeg"/>
+              Title: <input type="text"/>
+            </div>
+            <div>
+              Audio 2: 
+              <input type="file" id="audio" name="audio" accept="audio/mpeg"/>
+              Title: <input type="text"/>
+            </div>
+            <div>
+              Audio 3: 
+              <input type="file" id="audio" name="audio" accept="audio/mpeg"/>
+              Title: <input type="text"/>
+            </div>
+            <div>
+              Audio 4: 
+              <input type="file" id="audio" name="audio" accept="audio/mpeg"/>
+              Title: <input type="text"/>
+            </div>
+          </div>
+          <div class="export-section">
+            <div class="printable-section">
+              Is printable: <input type="checkbox" class="printable_checkbox" id="is_printable" name="is_printable" value="true"/>
+            </div>
+            <div class="export-btn">
+              <button class="btn fifth">Export</button>
+            </div>
+          </div>
         </div>
+
       </div>
       <div class="footer">
         <div class="footer-content">

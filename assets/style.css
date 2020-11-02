@@ -7,8 +7,9 @@ body {
 }
 
 .header {
-    background-color: #161b1f;
-    padding: 5px;
+    background-color:black;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .render-container {
@@ -51,6 +52,15 @@ body {
 
 .settings {
     display: flex;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.non-hidden {
+    display: flex;
 }
 
 input {
@@ -58,8 +68,12 @@ input {
     width: 200px;
 }
 
+.printable_checkbox {
+    width: 20px;
+}
+
 .input-section {
-    width: 600px;
+    width: 580px;
 }
 .export-section {
     width: 200px;
@@ -92,7 +106,6 @@ input {
 
 .version {
     color: #ccc;
-    font-family: "Times New Roman", Times, serif;
 }
 
 /* ============================================================== */
